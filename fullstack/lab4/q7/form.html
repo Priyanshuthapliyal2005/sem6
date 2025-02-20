@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Basic information</legend>
+
+            <label for="name">Full name:</label>
+            <input type="text" id="name" name="name" placeholder="enter your name"><br><br>
+            <label for="birthdate">BirthDate:</label>
+            <input type="date" id="birthdate" name="birthdate"><br><br>
+            <label>Gender :</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label for="Address">Address:</label>
+            <input type="text" id="Address" name="Address" placeholder="enter your address"><br><br>
+            
+            <label for="Number">Number:</label>
+            <input type="number" id="Number" name="Number" placeholder="mobile num country code"><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Extra information</legend>
+            <label for="Interests">Interests:</label>
+
+            <input type="checkbox" id="books" name="interests" value="books">
+            <label for="books">Books</label>
+
+            <input type="checkbox" id="movies" name="interests" value="movies">
+            <label for="movies">Movies</label>
+
+            <input type="checkbox" id="games" name="interests" value="videogames">
+            <label for="games">Videogames</label><br><br>
+
+            <label for="fav">Favourite color:</label>
+            <input type="color" id="fav" name="fav"><br><br>
+        </fieldset>
+
+        <button type="submit">Send Data</button>
+        <button type="reset">Reset Form</button>
+    </form>
+</body>
+</html>
