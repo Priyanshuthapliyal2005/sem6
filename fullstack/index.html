@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px; /* Adjust this based on header height */
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: #f2f3f2;
+      }
+
+      /* Header Section */
+      #header-title {
+        height: 20vh;
+        background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      /* Gradient Text Effect */
+      #heading1 {
+        font-weight: bold;
+        font-size: 50px;
+        background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+      }
+
+      /* Navbar */
+      #navbar {
+        background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      #navbar nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      #navbar a {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      #navbar a:hover {
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+      /* About Section */
+      #About {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 230px;
+      }
+
+      #About img {
+        border: 2px solid black;
+        border-radius: 3px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      #About img:hover {
+        transform: scale(1.1);
+      }
+
+      #About p {
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+      /* Projects Table */
+      #Projects {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+
+      #Projects table {
+        width: 90%;
+        max-width: 1000px;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Table Head */
+      thead {
+        background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+        color: #000;
+        font-size: 18px;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      /* Alternating Row Colors */
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      /* Hover Effect for Each Cell */
+      td:hover {
+        background-color: rgba(0, 147, 233, 0.1);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Hover Effect for Table Header */
+      th:hover {
+        background-color: rgba(128, 192, 252, 0.5);
+        transition: 0.3s ease-in-out;
+      }
+
+      #Contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 30px;
+        margin-left: 40px;
+        margin-bottom: 30px;
+        margin-right: 40px;
+      }
+
+      #Contact form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 16px;
+        background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        margin-top: 8px;
+      }
+
+      #Contact form label {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 8px;
+        transition: all 0.3s ease-in-out; /* Add transition here */
+      }
+
+      input:hover,
+      textarea:hover {
+        background-color: #f9f9f9;
+        transform: scale(1.01); /* Apply transform */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      button {
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 3px;
+        background-color: #121fcf;
+        color: white;
+      }
+
+      button:hover {
+        background-color: #121fcf;
+        transform: scale(1.01);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #videos-sec {
+        margin: 40px;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 3px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #video-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+      }
+
+      #video-part {
+        margin: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      iframe {
+        border: 1px solid black;
+        border-radius: 3px;
+      }
+
+      iframe:hover {
+        background-color: rgba(0, 147, 233, 0.1);
+        transform: scale(1.02);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #foot {
+        height: 12vh;
+        background: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .footer-img {
+        height: 42px;
+        width: 42px;
+        border: 2px solid black;
+        border-radius: 3px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .footer-img:hover {
+        transform: scale(1.1);
+      }
+
+      #navbar-foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        z-index: 1000;
+      "
+    >
+      <div id="header-title">
+        <h1 id="heading1">MY PORTFOLIO</h1>
+      </div>
+
+      <!-- Navigation Bar -->
+      <div id="navbar">
+        <nav class="navbar navbar-expand-lg" id="navbar1">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#Contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section id="About">
+      <img
+        src="photo.jpeg"
+        alt="profile pic"
+      />
+      <p>
+        💫 About Me:<br>
+        🌱 I'm currently working on: Exploring the MERN stack with a focus on web development projects.<br>
+        🤝 I'm looking to collaborate on: MERN stack projects and integrating machine learning with web applications.<br>
+        💬 I'm looking for help with: Advanced MERN stack concepts and incorporating machine learning into web applications.<br>
+        📚 I'm currently learning: Full-stack development (React, Node.js, MongoDB, Express.js) and basics of machine learning.<br>
+        💡 Ask me about: Building efficient web applications and my experiences with hackathons.<br>
+        ⚡ Fun fact: I've solved over 600+ questions on LeetCode and rank in the top 10%!<br>
+      </p>
+    </section>
+
+    <section id="Projects">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Tech Used</th>
+            <th>Completed On</th>
+            <th>Link To The Project</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Url Shortner</td>
+            <td>Implemented URL shortening and redirection functionality using Go and Gin.</td>
+            <td>Go, Gin, MongoDB, Redis</td>
+            <td>March 2025</td>
+            <td><a href="https://github.com/Priyanshuthapliyal2005/url-shortner">Project Link</a></td>
+          </tr>
+          <tr>
+            <td>Face Emotions Detection System</td>
+            <td>A system to detect emotions from facial expressions using machine learning.</td>
+            <td>Python, OpenCV, TensorFlow</td>
+            <td>February 2025</td>
+            <td><a href="https://github.com/Priyanshuthapliyal2005/face-emotions-detection-system">Project Link</a></td>
+          </tr>
+          <tr>
+            <td>Coders</td>
+            <td>Engineered a system to detect and flag banned cheaters in coding contests.</td>
+            <td>React, JavaScript, Express.js, GraphQL</td>
+            <td>January 2025</td>
+            <td><a href="https://coders-one.vercel.app/">Live Demo</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="videos-sec">
+      <div id="video-head">
+        <h4 style="font-size: 18px; margin: 6px; font-weight: bold">
+          Project Videos
+        </h4>
+      </div>
+      <div id="video-part">
+        <iframe
+          src="https://drive.google.com/file/d/12TCNQOpNbn9HpcdpPU1FZm9OCHljnZKq/preview"
+          width="300"
+          height="200"
+          allow="autoplay"
+        ></iframe>
+        <iframe
+          src="https://drive.google.com/file/d/1c2apZ7HnMtCZApYFRRu91qyBYF5bpWnm/preview"
+          width="300"
+          height="200"
+          allow="autoplay"
+        ></iframe>
+        <iframe
+          src="https://drive.google.com/file/d/12Fu3CwAVSxQTLhNzR1WL1WvKkrfjKSYI/preview"
+          width="300"
+          height="200"
+          allow="autoplay"
+        ></iframe>
+      </div>
+    </section>
+
+    <article id="Contact">
+      <h4 style="text-align: center; color: black; font-weight: bold">
+        Contact Me
+      </h4>
+      <form >
+        <label for="username">Name</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter your name"
+        />
+        <label for="emailid">Email</label>
+        <input
+          type="email"
+          name="emailid"
+          id="emailid"
+          placeholder="Enter email"
+        />
+        <label for="subject">Subject</label>
+        <input type="text" name="subject" id="subject" />
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="10" rows="10"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </article>
+
+    <footer>
+      <div id="foot">
+        <nav id="navbar-foot">
+          <h6
+            style="
+              font-weight: bold;
+              font-size: 20px;
+              background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            "
+          >
+            Link To Profiles
+          </h6>
+          <a href="https://linkedin.com/in/priyanshu-thapliyal"><img
+              src="https://res.cloudinary.com/dwdfcdv0g/image/upload/v1740758848/lv2drfoghbm7xazvxgmc.png"
+              alt="Linkedin Profile Link"
+              class="footer-img"
+          /></a>
+          <a href="https://github.com/Priyanshuthapliyal2005"><img
+              src="https://res.cloudinary.com/dwdfcdv0g/image/upload/v1740758849/nk8hucl3ukihf0r4pyn5.png"
+              alt="Github profile Link"
+              class="footer-img"
+          /></a>
+          <a href="https://leetcode.com/priyanshuthapliyal/"><img
+              src="https://res.cloudinary.com/dwdfcdv0g/image/upload/v1740758848/zn6jqffnphgkip3bjps0.png"
+              alt="LeetCode Profile Link"
+              class="footer-img"
+          /></a>
+        </nav>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
