@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newspaper Cutting Example</title>
-    <style>
-        .newspaper {  
-            column-count: 3;  
-            column-gap: 30px;  
-            padding: 30px;  
-            width: 80%;  
-            margin: auto;  
-            text-align: justify;  
-            border: 2px solid black;  
-            background-color: lightyellow;  
-        }  
-        body {  
-            border: 6px solid rgb(26, 26, 148);  
-            width: 80vh;  
-            height: 50vh;  
-            margin: 10px;  
-            padding: 15px;  
-            flex-direction: column;  
-            align-items: center;  
-            justify-content: space-between;  
-            position: relative;  
-        } 
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+.border {
+border: 2px solid black; padding: 20px;
+width: 1500px; text-align: center;
+}
+.box{
+width: 1000px; height: 500px; margin: 20px auto; padding: 20px;
+border: 5px solid black; column-count: 3; column-gap: 20px;
+column-rule: 2px solid black;
+}
+.box h1{
+column-span: all; text-align: center;
+margin-bottom: 15px;
+}
+.box p{
+text-align: justify; break-before: column;
+}
+</style>
 </head>
 <body>
-    <h2>Newspaper Cutting Example</h2> 
-    <div class="newspaper"> 
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde natus tempora eius nisi quos, aliquid ex, aut deserunt deleniti,</p> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, id. Similique exercitationem fuga deleniti</p> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias enim hic rem neque! Doloribus tempore facere expedita .</p> 
-    </div> 
-    <p style="text-align: left; font-size: 1.2em; font-weight: bold; margin-left: 120px;">  
-Name - Priyanshu Thapliyal &nbsp;&nbsp; UnivId : 220112794&nbsp;&nbsp; Roll No- 49 &nbsp;&nbsp; Section -C1  
-</p>  
+<div class="border">
+<div class="box">
+<h1>Newspaper</h1>
+<p>In a breakthrough in the tunnel collapse rescue operation in Telangana that has been going on for a week, the whereabouts of four of the total eight persons trapped has been located, state Excise Minister Jupally Krishna Rao said on Saturday (March 1, 2025).
+ 
+Krishna Rao, who attended a meeting with officials involved in the rescue operation along with Irrigation Minister N Uttam Kumar Reddy, said there was lot of progress during the last couple of days.</p>
+<p>On Friday (February 28, 2025), Gopal Joshi, one of 55 construction workers housed in containers near Mana, came out expecting a morning sheathed in silence like every day. What he met with was a roaring cascade of snow coming right at them with a ferocious speed.</p>
+</div>
+<h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+</div>
 </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Capital Matching Game</title>
+</head>
+<body>
+    <h1>Match the Country with its Capital</h1>
+
+    <select id="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="france">France</option>
+        <option value="italy">Italy</option>
+        <option value="japan">Japan</option>
+        <option value="china">China</option>
+    </select>
+
+    <select id="capital">
+        <option value="delhi">Delhi</option>
+        <option value="washington">Washington</option>
+        <option value="paris">Paris</option>
+        <option value="rome">Rome</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="beijing">Beijing</option>
+    </select>
+
+    <button type="button" onclick="match()">Match</button>
+    <div id="result"></div>
+
+    <script>
+        function match(){
+            var country = document.getElementById("country").value;
+            var capital = document.getElementById("capital").value;
+            
+            var correctPairs = {
+                'india': 'delhi',
+                'usa': 'washington',
+                'france': 'paris',
+                'italy': 'rome',
+                'japan': 'tokyo',
+                'china': 'beijing'
+            };
+            
+            if(correctPairs[country] === capital){
+                document.getElementById("result").innerHTML = "Correct! " + country.toUpperCase() + "'s capital is " + capital.charAt(0).toUpperCase() + capital.slice(1);
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").innerHTML = "Wrong! The capital of " + country.toUpperCase() + " is " + correctPairs[country].charAt(0).toUpperCase() + correctPairs[country].slice(1);
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+</body>
+</html>

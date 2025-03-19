@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valid Card</title>
+</head>
+<body>
+    <h1>Valid Card</h1>
+    Enter Card Number: <input type='text' id="i"><br><br>
+    <button type="button" onclick="validate()">Validate</button>
+    <div id="loc"></div>
+
+    <h1>Valid Card using regex</h1>
+    Enter Card Number: <input type='text' id="j"><br><br>
+    <button type="button" onclick="regex()">Validate</button>
+    <div id="new"></div>
+
+    
+
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+
+    <script>
+        function validate(){
+            var num = document.getElementById("i").value;
+            var sub = num.substring(0,2);
+            var sub2 = num.substring(0,1);
+            if(num.length == 16 && (sub >= 51 && sub <= 55)){
+                document.getElementById("loc").innerHTML = "Valid mastercard Number";
+            }
+            else if((num.length == 16 || num.length == 13) && (sub2 == 4)){
+                document.getElementById("loc").innerHTML = "Valid visa card Number";
+            }
+            else if(num.length == 15  && (sub == 34 || sub == 37)){
+                document.getElementById("loc").innerHTML = "Valid American Expres card Number";
+            }
+            else{
+                document.getElementById("loc").innerHTML = "Invalid Card Number";
+            }
+        }
+
+        function regex(){
+            var num = document.getElementById("j").value;
+            if((/(^5[1-5])/.test(num) && num.length == 16)){
+                document.getElementById("new").innerHTML = "Valid Mastercard Number";
+            }
+            else if((/^4/.test(num) && (num.length == 13 || num.length ==16))){
+                document.getElementById("new").innerHTML = "Valid Visa Number";
+            }
+            else if((/^(34|37)/.test(num) && num.length == 15)){
+                document.getElementById("new").innerHTML = "Valid American Express Number";
+            }
+            else{
+                document.getElementById("new").innerHTML = "Invalid Card Number";
+            }
+        }
+    </script>
+</body>
+</html>

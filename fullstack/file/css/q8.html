@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positions</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            color: white;
+            padding: 10px;
+        }
+        .container {
+            position: relative;
+            border: 2px dashed #ccc;
+            height: 300px;
+            margin: 20px;
+        }
+        .static-box {
+            position: static;
+            background-color: #3498db;
+        }
+        .relative-box {
+            position: relative;
+            top: 20px;
+            left: 20px;
+            background-color: #e74c3c;
+        }
+        .absolute-box {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: #2ecc71;
+        }
+        .fixed-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #9b59b6;
+        }
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: #f1c40f;
+        }
+        .scroll-content {
+            height: 600px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position Properties</h1>
+    <div class="box static-box">Static</div>
+    
+    <div class="container">
+        <div class="box relative-box">Relative</div>
+        <div class="box absolute-box">Absolute</div>
+    </div>
+    
+    <div class="box fixed-box">Fixed</div>
+    
+    <div class="scroll-content">
+        <div class="box sticky-box">Sticky</div>
+        <p>Scroll to see sticky and fixed position effects</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+</body>
+</html>

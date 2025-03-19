@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+
+    Enter Name: <input type="text" id="name"><br><br>
+    Enter Email: <input type="text" id="email"><br><br>
+    Enter Password: <input type="password" id="password"><br><br>
+    <button type="button" onclick="validate()">Validate</button>
+    
+    <div id="loc"></div>
+
+
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value.trim();   
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value;
+
+            var messages = [];
+
+            if (/^[a-zA-Z\s]{3,}$/.test(name)) {
+                messages.push("✅ Valid Name");
+            } else {
+                messages.push("❌ Invalid Name (must be at least 3 letters and can include spaces)");
+            }
+            
+            if (/^[a-zA-Z0-9.%+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                messages.push("✅ Valid Email");
+            } else {
+                messages.push("❌ Invalid Email");
+            }
+
+            if (/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/.test(password)) {
+                messages.push("✅ Valid Password");
+            } else {
+                messages.push("❌ Invalid Password (8-15 chars, must include a letter, a number, and a special character)");
+            }
+
+            document.getElementById("loc").innerHTML = messages.join("<br>");
+        }
+    </script>
+</body>
+</html>

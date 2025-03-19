@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page using CSS</title>
+    <style>
+        /* Different font styles */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Dancing+Script&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/abstract-blue-geometric-shapes-background_24972-1841.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        /* Link styles */
+        a:link {
+            color: #0066cc;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:visited {
+            color: #800080;
+        }
+
+        a:hover {
+            color: #ff0000;
+            text-decoration: underline;
+            cursor: help;
+        }
+
+        a:active {
+            color: #00ff00;
+            cursor: progress;
+        }
+
+        /* Layers with z-index */
+        .layer {
+            position: relative;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .layer1 {
+            background-image: url('https://img.freepik.com/free-vector/group-people-working-together_52683-28615.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 200px;
+            z-index: 2;
+        }
+
+        .layer2 {
+            margin-top: -50px;
+            background-color: rgba(255, 0, 0, 0.1);
+            z-index: 3;
+        }
+
+        .register-link {
+            display: block;
+            text-align: center;
+            font-size: 1.2em;
+            margin: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white !important;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .layer-text {
+            font-family: Arial, sans-serif;
+            color: #ff0000;
+            text-align: center;
+            font-size: 24px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Page using CSS</h1>
+    
+    <a href="#" class="register-link">Register</a>
+
+    <div class="layer layer1">
+    </div>
+
+    <div class="layer layer2">
+        <p class="layer-text">Layer 2</p>
+    </div>
+
+    <div class="layer layer2">
+        <p class="layer-text">Layer 2</p>
+    </div>
+
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+</body>
+</html>
