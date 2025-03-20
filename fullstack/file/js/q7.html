@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Find the day of the week for your birthdate</h1>
+    <input type="date" id="birthdate"/>
+    <button onclick="findDay()">Find</button>
+
+    <script>
+        function findDay(){
+            const birthdate = document.getElementById("birthdate").value;
+            if(birthdate){
+                const date = new Date(birthdate);
+                const day = date.getDay();
+                const days= ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+                alert(`You were born on ${days[day]}`);
+            }else{
+                alert("Please enter a valid birthdate");
+            }
+        }
+    </script>
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+</body>
+</html>

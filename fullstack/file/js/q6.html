@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Counter Example</h1>
+    <p id="counter">0</p>
+    <button onclick="startCounter()">Start</button>
+    <button onclick="resetCounter()">Reset</button>    
+
+    <script>
+        let count = 0;
+        let interval;
+
+        function startCounter() {
+            count = 1; 
+            document.getElementById("counter").innerHTML = count;
+            interval = setInterval(() => {
+                count++;
+                document.getElementById("counter").innerHTML = count;
+            }, 1000); 
+        }
+
+        function resetCounter() {
+            clearInterval(interval);
+            count = 0;
+            document.getElementById("counter").innerHTML = count;
+        }
+    </script>
+    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
+</body>
+</html>
