@@ -1,0 +1,5 @@
+hi i am priyanshu , i am pursuing btech cse from gehu ddn . 
+i have worked on js lib like reactjs and js framework like next js for 
+building scalable web app.
+i have some amazing projects like 
+unisaarash a univ govt dashbaord for solving issue of data inefficieny 
