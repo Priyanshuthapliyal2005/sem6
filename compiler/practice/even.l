@@ -3,8 +3,8 @@
 %}
 
 %%
-[a-zA-Z0-9_.]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}  {printf("%s is the valid email",yytext);}
-.*   {printf("%s is the not valid email",yytext);}
+-?[0-9]+   {printf("integer");}
+-?[0-9]*.[0-9]+   {printf("float");}
 %%
 
 int main(){

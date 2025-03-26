@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>self updating page</p>
+    <p id="loc">0</p>
+    <button onclick="start()">Start</button>
+    <button onclick="rst()">Reset</button>
+    
+
+    <script>
+        function start(){
+            cnt =1;
+            document.getElementById('loc').innerHTML= cnt;
+            interval = setInterval(()=>{
+                cnt++;
+                document.getElementById('loc').innerHTML= cnt;
+                
+            },100);
+        }
+        function rst(){
+            clearInterval(interval);
+            cnt=0;
+            document.getElementById('loc').innerHTML= cnt;
+        }
+    </script>
+</body>
+</html>
