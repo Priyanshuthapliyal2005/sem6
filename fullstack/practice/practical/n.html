@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg-Repeat</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 600vh;
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            width: 50vh;  /* Adjusted size */
+            height: 30vh;
+            border: 5px solid red;  /* Fixed border */
+            margin: 20px;
+        }
+
+        .x {
+            background-image: url("photo.jpeg");
+            background-repeat: repeat-x;
+            background-size: contain;
+        }
+
+        .y {
+            height:450vh;
+            background-image: url("photo.jpeg");
+            background-repeat: repeat-y;
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Image Repeating</h1>
+    <div class="box x">repeat-x</div>
+    <div class="box y">repeat-y</div>
+</body>
+</html>
