@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        rounded edge
+    </title>
+    <style>
+        body{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+            margin:auto ;
+        }
+        .box{
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            height: 50vh;
+            width:50vh;
+            border: 2px solid blue;
+            margin: 10vh 10vh;
+        }
+        .rect{
+            height:100px;
+            width:150px;
+            background: white;
+            border:1px solid black;
+        }
+        .rect:hover{
+            background: blue;
+            /* border-radius: 20px; */
+            clip-path: polygon(50% 0% , 0% 100% , 100% 100%);
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="rect"></div>
+    </div>
+</body>
+</html>

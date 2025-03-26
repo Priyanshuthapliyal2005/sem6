@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>q3</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid blue;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box"></div>
+    <button onclick="convert()">circle</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+        let box = document.getElementById("box");
+        function convert() {
+            // box.style.borderRadius = "50%";
+            box.style.transform = "rotate(45deg)";
+            box.style.background = "yellow";
+            alert("Transformed!");
+        }
+
+        function reset() {
+            // box.style.borderRadius = "0";
+            box.style.transform = "rotate(0deg)";
+            box.style.background = "blue";
+            alert("Reset to original!");
+        }
+    </script>
+  </body>
+</html>

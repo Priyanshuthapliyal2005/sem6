@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Basic Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name">
+
+            <br><br>
+
+            <label for="dob">Birth Date:</label>
+            <input type="date" id="dob" placeholder="dd-mm-yyyy">
+
+            <br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+
+            <br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address">
+
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone">
+
+            <br><br>
+        </fieldset> 
+
+        <fieldset>
+            <legend>Extra Information</legend>
+            <label>Interests:</label>
+
+            <input type="checkbox" id="books">
+            <label for="books">Books</label>
+            <input type="checkbox" id="movies">
+            <label for="movies">Movies</label>
+            <input type="checkbox" id="videogames">
+            <label for="videogames">VideoGames</label>
+
+            <br><br>
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color">
+
+            <br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>File Uploads</legend>
+
+            <label for="pdf">Upload PDF:</label>
+            <input type="file" id="pdf" accept=".pdf">
+            <br><br>
+
+            <label for="audio">Upload Audio:</label>
+            <input type="file" id="audio" accept="audio/*">
+            <br><br>
+
+            <label for="video">Upload Video:</label>
+            <input type="file" id="video" accept="video/*">
+            <br><br>
+        </fieldset>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.querySelector("form").addEventListener("submit",function(event){
+            event.preventDefault();
+            alert("form submitted sucess!");
+        });
+    </script>
+</body>
+</html>
