@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning Example</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 150vh;
+            margin: 0;
+        }
+
+        .container {
+            border: 5px solid black;
+            width: 80%;
+            height: 80%;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            position: relative;
+        }
+
+        .box {
+            width: 80px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .static {
+            background: orange; 
+            position: static;
+        }
+
+        .relative {
+            background: yellow;
+            position: relative;
+            top: 0px;
+        }
+
+       - .absolute {
+            background: blue;
+            position: absolute;
+            top: 90px;
+        }
+
+        .fixed {
+            background: green;
+            position: fixed;
+            top: 255px;
+            right: 150px;
+        }
+
+        .sticky {
+            background: pink;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Positioning Example</h1>
+    <div class="container">
+        <div class="box static">Static</div>
+        <div class="box relative">Relative</div>
+        <div class="box absolute">Absolute</div>
+        <div class="box fixed">Fixed</div>
+        <div class="box sticky">Sticky</div>
+    </div>
+</body>
+</html>
