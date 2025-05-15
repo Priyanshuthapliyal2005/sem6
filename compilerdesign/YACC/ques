@@ -1,0 +1,3 @@
+design yacc/lex code to identify whether the mathematical expression over +,-,*,/,(,) is valid or not.
+design a yacc/lex code to compute mathematical expression over +,-,*,/,(,)
+design a yacc/lex code to convert infix expression to postfix expression.

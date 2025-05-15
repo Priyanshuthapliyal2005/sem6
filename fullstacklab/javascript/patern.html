@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="abc"></div>
+    <div id="def"></div>
+    <form action="" onsubmit="myfunc()">
+        username <input type="text" name="" id="name">
+        <input type="submit" value="submit" >
+    </form>
+    <script>
+        function myfunc(){
+            event.preventDefault();
+            const p= /hello/;
+            var str = document.getElementById('name').value;
+            var result = str.match(p);
+            document.getElementById("abc").innerHTML=result;
+            var result1 = p.test(str);  
+            document.getElementById("def").innerHTML=result1;
+        }
+    </script>
+</body>
+</html>

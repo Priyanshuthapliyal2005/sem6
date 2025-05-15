@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="str">Enter a string: </label>
+    <input type="text" name="" id="str"><br><br>
+    <button type="button" onclick="find_first_vowel()">Find vowel</button>
+    <div id="vow"></div><br><br>
+    <label for="num">Enter a  number: </label>
+    <input type="number" name="" id="num"><br><br>
+    <button type="button" onclick="reverse_number()">Reverse number</button>
+    <div id="rev"></div><br><br>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+
+    <script>
+        function find_first_vowel(){
+            var str= document.getElementById("str").value;
+            var vowels="aeiouAEIOU";
+            for(var i=0;i<str.length;i++){
+                if(vowels.includes(str[i])){
+                    document.getElementById("vow").innerHTML="First vowel is at: "+i;
+                    break;
+                }
+            }
+        }
+        function reverse_number(){
+            var num= document.getElementById("num").value;
+            var rev=0;
+            while(num>0){
+                var rem= num%10;
+                rev= rev*10+rem;
+                num= parseInt(num/10);
+            }
+            document.getElementById("rev").innerHTML="Reversed number is: "+rev;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">String</label>
+    <input type="text" id="str" /><br><br>
+    <button type="button" onclick="swapcase()">Swap Case</button><br>
+    <p id="result"></p>
+    <script>
+        
+        function swapcase(){
+            var str= document.getElementById("str").value;
+            var ans="";
+            for(var i=0;i<str.length;i++){
+                if(str[i]==str[i].toUpperCase()){
+                    ans+=str[i].toLowerCase();
+                }
+                else{
+                    ans+=str[i].toUpperCase();
+                }
+            }
+            document.getElementById("result").innerHTML=ans;
+        }
+    </script>
+</body>
+</html>

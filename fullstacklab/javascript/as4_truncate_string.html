@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">String</label>
+    <input type="text" id="str" /><br><br>
+    <label for="len">Length</label>
+    <input type="number" id="len" /><br><br>
+    <button type="button" onclick="truncate_string()">Truncate String</button><br>
+    <p id="result"></p>
+
+    <script>
+        function truncate_string() {
+            var str = document.getElementById("str").value;
+            var len = parseInt(document.getElementById("len").value);
+            var result = document.getElementById("result");
+            if (str.length > len) {
+                result.innerHTML = str.substring(0, len);
+            } else {
+                result.innerHTML = str;
+            }
+        }
+    </script>
+</body>
+</html>

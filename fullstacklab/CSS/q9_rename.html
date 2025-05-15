@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page using CSS</title>
+    <style>
+        body {
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+            background: url('repeat.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+
+        a {
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:active {
+            color: green;
+        }
+        .image-container {
+            width: 300px;
+            height: 200px;
+            background: url('img.webp') no-repeat center;
+            background-size: cover;
+            margin: 20px auto;
+        }
+
+        .layer {
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .layer1 {
+            top: 300px;
+            left: 50%;
+            color: red;
+            width: 220px;
+            font-size: 50px;
+            height: 100px;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .layer2 {
+            top: 330px;
+            left: 50%;
+            color: blue;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        .layer_a {
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .layer3 {
+            top: 400px;
+            left: 50%;
+            color: red;
+            width: 220px;
+            font-size: 50px;
+            height: 100px;
+            z-index: 2;
+        }
+
+        .layer4 {
+            top: 430px;
+            left: 50%;
+            color: blue;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Web Page using CSS</h1>
+    </div>
+    <div>
+        Welcome to this page using CSS! We are applying different fonts, background styles, and layers.
+    </div>
+    <div class="content">
+        <p><a href="#">Register</a></p>
+        <div class="image-container"></div>
+    </div>
+    <div class="layer layer1">LAYER 1</div>
+    <div class="layer layer2">LAYER 2</div>
+    <div class="layer_a layer3">LAYER 2</div>
+    <div class="layer_a layer4">LAYER 1</div>
+    <pre>Name: Priyanshu Negi   Std.Id: 22011884   Sem: 6th   Sec: C1</pre>
+
+</body>
+</html>

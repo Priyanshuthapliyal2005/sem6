@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Enter a string</label>
+    <input type="text" name="" id="inp"><br>
+    <button type="button" onclick="inverse_case()">Change case</button>
+    <div id="ans"></div>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+
+    <script>
+        function inverse_case(){
+            var str= document.getElementById("inp").value;
+            var ans="";
+            for(var i=0;i<str.length;i++){
+                if(str[i]==str[i].toUpperCase()){
+                    ans+=str[i].toLowerCase();
+                }
+                else{
+                    ans+=str[i].toUpperCase();
+                }
+            }
+            document.getElementById("ans").innerHTML=ans;
+        }
+    </script>
+</body>
+</html>

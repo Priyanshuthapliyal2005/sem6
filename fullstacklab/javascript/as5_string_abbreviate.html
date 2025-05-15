@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">String</label>
+    <input type="text" id="str" /><br><br>
+    <button type="button" onclick="abbreviate()">abbreviate</button>
+    <p id="result"></p>
+    <script>
+        function abbreviate() {
+            let str = document.getElementById("str").value;
+            let words = str.split(" ");
+            let abbreviated = "";
+            for (let word of words) {
+                if (word.length > 0) {
+                    abbreviated += word[0].toUpperCase();
+                }
+            }
+            document.getElementById("result").innerHTML = abbreviated;
+        }        
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">String</label>
+    <input type="text" id="str" /><br><br>
+    <button type="button" onclick="capitalize_first_of_each()">Capitalize </button>
+    <p id="result"></p>
+    <script>
+        function capitalize_first_of_each() {
+            var str = document.getElementById("str").value;
+            var result = document.getElementById("result");
+            var words = str.split(" ");
+            for (var i = 0; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            result.innerHTML = words.join(" ");
+        }
+    </script>
+</body>
+</html>
