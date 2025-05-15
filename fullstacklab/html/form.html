@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- get-- shows details in url -->
+    <!-- post-- dont show details in url -->
+    <form action="abc.php" method="get">
+        <!-- "for" in lable is used to link lable and other element  -->
+        <label for="fname">FirstName: </label>
+        <input type="text" id="fname"><br><br>
+        <label for="lname">LastName: </label>
+        <input type="text" id="lname"><br>
+        <label for="gender">Male</label>
+        <input type="checkbox" id="gender">
+        <label for="gender">Female</label>
+        <input type="checkbox" id="gender">
+        <br>
+        
+        <fieldset>
+            <legend>Gender</legend>
+            <label for="gender">Male</label>
+            <input type="radio" id="gender">
+            <label for="gender">Female</label>
+            <input type="radio" id="gender">
+        </fieldset>
+
+        <output>output here</output><br>
+        <select name="" id="" multiple size="4">
+            <option value="delhi">delhi</option>
+            <option value="dehradun">dehradun</option>
+            <option value="agra">agra</option>
+        </select><br>
+
+        <input list="dl" type="text">
+        <datalist id="dl">
+            <option value="delhi">delhi</option>
+            <option value="agra">agra</option>
+            <option value="mumbai">mumbai</option>
+            <option value="dehradun">dehradun</option>
+        </datalist>
+
+        <button>click here</button><br>
+        <label for="">address</label><br>
+        <textarea name="" id="" rows="5" cols="5"></textarea>
+        <input type="submit" value="send">
+        <video src=""></video>
+    </form>
+</body>
+</html>

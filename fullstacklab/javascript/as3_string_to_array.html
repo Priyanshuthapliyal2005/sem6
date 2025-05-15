@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp">Enter here:</label>
+    <input type="text" id="inp" />
+    <button type="button" onclick="string_to_array()">String to array</button>
+    <p id="result"></p>
+    <script>
+        function string_to_array() {
+            var input = document.getElementById("inp").value;
+            input = input.trim(); 
+            var output = document.getElementById("result");
+            var result
+            if (input === "") {
+                result.innerHTML = "Please enter a value.";
+                return;
+            }
+
+            var len=input.length;
+            var first=0;
+            input+=" ";
+            result ='[';
+            for (let i = 0; i < len; i++) {
+                if (input[i]==" "){
+                    if(first!=0){
+                        result+='"' + ",";
+                    }
+                    first=0;
+                    continue;
+                }
+
+                if (input[i]!= " "){
+                    if(first==0){
+                        result+='"';
+                    }
+                    result +=  input[i] ;
+                    first++;
+                }
+            } 
+            result += '"]';
+            output.innerHTML = result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="abc"></div>
+    <form action="" onsubmit="even_odd()">
+        <input type="submit">
+    </form>
+    <script>
+        function even_odd(){
+            event.preventDefault();
+            var a = window.prompt("Enter a number: ");
+            if(a%2==0){
+                document.getElementById("abc").innerHTML="even";
+            }
+            else{
+                document.getElementById("abc").innerHTML="odd";
+                
+            }
+        }
+    </script>
+</body>
+</html>

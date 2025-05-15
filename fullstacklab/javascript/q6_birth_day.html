@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Enter birth date</label>
+    <input type="date" id="bd"><br>
+    <button type="button" onclick="myfun()">get day</button>
+    <div id="loc"></div>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+
+    <script>
+        function myfun(){
+            const week=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            var bd = document.getElementById("bd").value;
+            var d = new Date(bd);
+            var day=d.getDay();
+            day=week[day];
+            document.getElementById("loc").innerHTML = day;
+        }
+    </script>
+</body>
+</html>

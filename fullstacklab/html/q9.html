@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Tags Example</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <h2>HTML5 Tags Demonstration</h2>
+        <p>This is an example of an article section.</p>
+    </article>
+
+    <section>
+        <h2>Video Example</h2>
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section>
+        <h2>Audio Example</h2>
+        <audio controls>
+            <source src="audio.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </section>
+
+    <section>
+        <h2>Embed Example</h2>
+        <embed src="webd.pdf" width="400" height="275" type="application/pdf">
+    </section>
+
+    <section>
+        <h2>Datalist Example</h2>
+        <label for="browser">Choose your browser:</label>
+        <input list="browsers" id="browser" name="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+            <option value="Opera">
+        </datalist>
+    </section>
+
+    <section>
+        <h2>Bdi Example</h2>
+        <p>Usernames: <bdi>JohnDoe123</bdi>, <bdi>محمد</bdi>, <bdi>Иван</bdi></p>
+    </section>
+
+    <section>
+        <h2>Output Example</h2>
+        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+            <input type="range" id="a" value="50"> +
+            <input type="number" id="b" value="50">
+            = <output name="result" for="a b">100</output>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+    <pre>Name: Priyanshu Negi   Std.Id: 22011884   Sem: 6th   Sec: C1</pre>
+</body>
+</html>

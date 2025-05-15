@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="city">City</label>
+    <select name="" id="city">
+        <option value="D">Delhi</option>
+        <option value="M">Mumbai</option>
+        <option value="C">Chennai</option>
+        <option value="K">Kolkata</option>
+    </select>
+    <label for="car">car</label>
+    <select name="" id="car">
+        <option value="mk">Maruti-K10</option>
+        <option value="z">Zen-Astelo</option>
+        <option value="w">Wagnor</option>
+        <option value="ms">Maruti-SX4</option>
+    </select><br>
+    <button type="button" onclick="addCar()">Submit</button>
+    <table border="1px">
+        <tr>
+            <th>City</th>
+            <th>Maruti-K10</th>
+            <th>Zen-Astelo</th>
+            <th>Wagnor</th>
+            <th>Maruti-SX4</th>
+        </tr>
+        <tr>
+            <td>Delhi</td>
+            <td id="Dmk">0</td>
+            <td id="Dz">0</td>
+            <td id="Dw">0</td>
+            <td id="Dms">0</td>
+        </tr>
+        <tr>
+            <td>Mumbai</td>
+            <td id="Mmk">0</td>
+            <td id="Mz">0</td>
+            <td id="Mw">0</td>
+            <td id="Mms">0</td>
+        </tr>
+        <tr>
+            <td>Chennai</td>
+            <td id="Cmk">0</td>
+            <td id="Cz">0</td>
+            <td id="Cw">0</td>
+            <td id="Cms">0</td>
+        </tr>
+        <tr>
+            <td>Kolkata</td>
+            <td id="Kmk">0</td>
+            <td id="Kz">0</td>
+            <td id="Kw">0</td>
+            <td id="Kms">0</td>
+        </tr>
+    </table>
+    <div id="loc"></div>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+
+    <script>
+        function addCar(){
+            var city= document.getElementById('city').value;
+            var car= document.getElementById('car').value;
+            var toadd=city+car;
+            var count=Number(document.getElementById(toadd).innerHTML);
+            count++;
+            document.getElementById(toadd).innerHTML=count;
+        }
+    </script>
+</body>
+</html> 

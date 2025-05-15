@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" placeholder="Enter number" name="" id="in1"><br><br>
+    <input type="number" placeholder="Enter number" name="" id="in2"><br><br>
+    <select name="" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button type="button" onclick="calculate()">calculate</button>
+    <div id="ans"></div><br>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+    <script>
+        function calculate(){
+            var num1 = Number(document.getElementById("in1").value);
+            var num2 = Number(document.getElementById("in2").value);
+            var op =document.getElementById("operator").value;
+            var ans;
+            if(op=='+'){
+                ans=num1+num2;
+            }
+            else if(op=='-'){
+                ans=num1-num2;
+            }
+            else if(op=='*'){
+                ans=num1*num2;
+            }
+            else if(op=='/'){
+                ans=num1/num2;
+            }
+            else{
+                ans="invalid";
+            }
+            document.getElementById("ans").innerHTML=ans;
+        }
+    </script>
+</body>
+</html>

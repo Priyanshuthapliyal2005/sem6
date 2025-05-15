@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="str">String</label>
+    <input type="text" id="str" /><br><br>
+    <button type="button" onclick="string_paremeterize()">Parameterize</button>
+    <p id="result"></p>
+    <script>
+        function string_paremeterize() {
+            var str = document.getElementById("str").value;
+            var result = document.getElementById("result");
+            var parameterized = str.replace(/ /g, "-").toLowerCase();
+            result.innerHTML = parameterized;
+        }
+    </script>
+</body>
+</html>

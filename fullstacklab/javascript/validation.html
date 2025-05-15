@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="abc"></div>
+    <form action="test.php" onsubmit="return myfunc(event)">
+        username <input type="text" name="" id="name">
+        <input type="submit" value="submit" >
+    </form>
+    <script>
+        function myfunc(event){
+            //  event.preventDefault();
+            var a= document.getElementById('name').value;
+            if(a=="hello"){
+                document.getElementById('abc').innerHTML="valid";
+                return true;
+            }
+            else{
+                document.getElementById('abc').innerHTML="invalid";
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

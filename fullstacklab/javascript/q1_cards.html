@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Enter card number</label>
+    <input type="number" name="" id="inp"><br><br>
+    <button type="button" onclick="validate_reg()">validate</button>
+    <div id="ans"></div>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+    <script>
+        
+         function validate_str(){
+            var num= document.getElementById("inp").value;
+            var sub1= num.substring(0,2);
+            var sub2= num.substring(0,1);
+            if(num.length==16 && (sub1>=51 && sub1<=55)){
+                document.getElementById("ans").innerHTML="master card";
+            }
+            else if((num.length==16 || num.length==13) && (sub2==4)){
+                document.getElementById("ans").innerHTML="visa card";
+            }
+            else if(num.length==15 && (sub1==37 || sub1==34)){
+                document.getElementById("ans").innerHTML="ameerican express card";
+            }
+            else{
+                document.getElementById("ans").innerHTML="invalid";
+            }
+        } 
+
+        function validate_reg(){
+            var num= document.getElementById("inp").value;
+            if(/5[1-5]/.test(num) && num.length==16){
+                document.getElementById("ans").innerHTML="master card";
+            }
+            else if(/^4/.test(num) && (num.length==13 || num.length==16)){
+                document.getElementById("ans").innerHTML="visa card";
+            }
+            else if(/^3(4|7)/.test(num) && num.length==15){
+                document.getElementById("ans").innerHTML="american express card";
+            }
+            else{
+                document.getElementById("ans").innerHTML="invalid";
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="inp">Enter here:</label>
+    <input type="email" id="inp" /><br><br>
+    <button type="button" onclick="hide_email()">Hide Email</button>
+    <p id="result"></p>
+    <script>
+        function hide_email() {
+            var input = document.getElementById("inp").value;
+            var output = document.getElementById("result");
+            if (input === "") {
+                output.innerHTML = "Please enter a value.";
+                return;
+            }
+            var atIndex = input.indexOf("@");
+            if (atIndex === -1) {
+                output.innerHTML = "Invalid email address.";
+                return;
+            }
+            var hiddenEmail = input.substring(0, 2) + "...@" + input.substring(atIndex + 1);
+            output.innerHTML = hiddenEmail;
+        }
+    </script>
+</body>
+</html>

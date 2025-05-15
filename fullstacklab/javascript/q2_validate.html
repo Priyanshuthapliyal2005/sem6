@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 5px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Name</h1>
+    <input type="text" placeholder="Enter name" name="" id="name"><br><br>
+    <button type="button" onclick="validate_name()" >validate</button>
+    <div id="name_out"></div><br>
+    <h1>Email</h1>
+    <input type="text" placeholder="Enter email" name="" id="email"><br><br>
+    <button type="button" onclick="validate_email()">validate</button>
+    <div id="email_out"></div><br>
+    <h1>Password</h1>
+    <input type="text" placeholder="Enter password" name="" id="pass"><br><br>
+    <button type="button" onclick="validate_pass()">validate</button>
+    <div id="pass_out"></div><br>
+    <pre>Name: Priyanshu Negi  Student Id:22011884  Sem: 6th  Sec: C1</pre>
+    <script>
+        function validate_name(){
+            var name=document.getElementById("name").value;
+            if(/^[a-zA-Z ]+$/.test(name)){
+                document.getElementById("name_out").innerHTML="valid";
+            }
+            else{
+                document.getElementById("name_out").innerHTML="invalid";
+            }
+        }
+        function validate_email(){
+            var email=document.getElementById("email").value;
+            if(/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/.test(email)){
+                document.getElementById("email_out").innerHTML="valid";
+            }
+            else{
+                document.getElementById("email_out").innerHTML="invalid";
+            }
+        }
+        function validate_pass(){
+            var pass=document.getElementById("pass").value;
+            if(/[a-zA-Z0-9]+[@#$%&_]*/.test(pass)){
+            //if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(pass)){
+                document.getElementById("pass_out").innerHTML="valid";
+            }
+            else{
+                document.getElementById("pass_out").innerHTML="invalid";
+            }
+        }
+    </script>
+</body>
+</html>

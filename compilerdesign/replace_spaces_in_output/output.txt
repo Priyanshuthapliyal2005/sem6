@@ -1,0 +1,6 @@
+this   is   input   file      tab  here    and here#
+another line #
+line #
+line #
+#
+line 

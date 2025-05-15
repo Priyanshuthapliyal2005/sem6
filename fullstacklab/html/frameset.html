@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    table tr{
+        border: 4px solid black;
+        font-size: 40px;
+        background-color: red;
+    }
+
+    #i {
+        border: 10px black solid;
+        background-color: white;
+    }
+
+    div p~span{
+        color: red;
+    }
+
+</style>
+
+<body>
+
+    <div>
+        <p>para outer</p>
+        <span>para outer 2 </span>
+        <span>
+            <p>para inner</p>
+        </span>
+        <p><span>iwducg</span></p>    
+    </div>
+
+
+    <table>
+        <tr>
+            <th colspan="2">head1</th>
+        </tr>
+        <tr>
+            
+            <td rowspan="3">hello</td>
+            <td>Hello</td>
+        </tr>
+        <tr>
+            <td>hello</td>
+        </tr>
+        <tr>
+            <td>hello</td>
+        </tr>
+        <tr>
+            <td colspan="2">Data</td>
+        </tr>
+    </table>
+
+    <form action="">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="username">
+
+        <label for="username">PASSWORD</label>
+        <input type="password" id="username" placeholder="********">
+
+        <label for="username">Username</label>
+        <input type="email" id="username" placeholder="@email">
+
+        <label for="username">Age</label>
+        <input type="number" id="username" placeholder="Age">
+
+        <label for="username">Username</label>
+        <input type="date" id="username" placeholder="username">
+
+        <fieldset>
+            <legend>wtf bro , whowowowoow</legend>
+            <Label>Male</Label>
+            <input type="radio" name="options" value="male">
+            <Label>Male</Label>
+            <input type="radio" name="options" value="female">
+            <Label>Male</Label>
+            <input type="radio" name="options">
+        </fieldset>
+
+        <textarea name="" id=""> likho bhai </textarea>
+
+        <select id="" >
+            <option value="">select a country</option>
+            <option value="value1">value1</option>
+            <option value="value1">value3</option>
+            <option value="value1">value2</option>
+        </select>
+
+        <input id = "i" list="fruits" style="background-color: red;">
+        <datalist id="fruits">
+            <option value="Apple">Apple</option>
+            <option value="mango">mango</option>
+            <option value="pinapple">pinapple</option>
+        </datalist>
+    </form>
+</body>
+
+</html>
