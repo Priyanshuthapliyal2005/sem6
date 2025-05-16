@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <p>Hi I am a React app</p>
+        <p>Hi This is a basic counter app.</p>
         <Counter />
       </header>
     </div>

@@ -3,72 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Positions</title>
+    <title>CSS Position Properties</title>
     <style>
-        .box {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            color: white;
-            padding: 10px;
+        body {
+            border: 5px solid black;  
+            margin: 20px;             
+            padding: 20px; 
+            font-family: Arial, sans-serif;
         }
-        .container {
-            position: relative;
-            border: 2px dashed #ccc;
-            height: 300px;
-            margin: 20px;
-        }
-        .static-box {
+        .static {
             position: static;
-            background-color: #3498db;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
         }
-        .relative-box {
+        .relative {
             position: relative;
             top: 20px;
             left: 20px;
-            background-color: #e74c3c;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 10px;
         }
-        .absolute-box {
+        .absolute-container {
+            position: relative;
+            height: 200px;
+            background-color: lightgray;
+            margin-bottom: 10px;
+        }
+        .absolute {
             position: absolute;
             top: 50px;
-            right: 50px;
-            background-color: #2ecc71;
+            left: 50px;
+            background-color: lightcoral;
+            padding: 10px;
         }
-        .fixed-box {
+        .fixed {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #9b59b6;
+            top: 10px;
+            right: 10px;
+            background-color: lightgoldenrodyellow;
+            padding: 10px;
         }
-        .sticky-box {
+        .sticky {
             position: sticky;
             top: 0;
-            background-color: #f1c40f;
-        }
-        .scroll-content {
-            height: 600px;
+            background-color: lightpink;
             padding: 10px;
-            background-color: #f9f9f9;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <h1>CSS Position Properties</h1>
-    <div class="box static-box">Static</div>
-    
-    <div class="container">
-        <div class="box relative-box">Relative</div>
-        <div class="box absolute-box">Absolute</div>
+    <div class="sticky">This is a sticky positioned element. Scroll down to see the effect.</div>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <div class="static">This is a static positioned element (default).</div>
+    <div class="relative">This is a relative positioned element.</div>
+    <div class="absolute-container">
+        <div class="absolute">This is an absolute positioned element.</div>
     </div>
-    
-    <div class="box fixed-box">Fixed</div>
-    
-    <div class="scroll-content">
-        <div class="box sticky-box">Sticky</div>
-        <p>Scroll to see sticky and fixed position effects</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-
-    <h2>Name - Priyanshu Thapliyal &nbsp;&nbsp; Student ID-220112794&nbsp;&nbsp; Semester- 6th &nbsp;&nbsp; Section -C1</h2>
-</body>
-</html>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div class="fixed">This is a fixed positioned element.</div>
+    <pre>Name: Priyanshu Thapliyal   Std.Id: 220112794   Sem: 6th   Sec: C1</pre>
+</body></html>
