@@ -5,23 +5,28 @@
     int yylex();
     void yyerror(const char *s);
     
-    char postfix[1000]; // Buffer for storing postfix expression
+    // We'll build the postfix expression using a different approach
+    // using a string representation for each expression
+    #define MAX_EXPR_LEN 1000
     
-    // Function to append a string to the postfix buffer
-    void append(const char* str) {
-        strcat(postfix, str);
-    }
-    
-    // Function to convert an integer to string and append it
-    void append_num(int num) {
-        char buffer[20];
-        sprintf(buffer, "%d ", num);
-        append(buffer);
+    // Function to create a new expression string
+    char* new_expr(const char* format, ...) {
+        char* str = (char*)malloc(MAX_EXPR_LEN);
+        if (!str) {
+            yyerror("Memory allocation failed");
+            exit(1);
+        }
+        va_list args;
+        va_start(args, format);
+        vsprintf(str, format, args);
+        va_end(args);
+        return str;
     }
 %}
 
 %union {
     int num;
+    char* expr;
 }
 
 %token <num> NUMBER
@@ -31,33 +36,36 @@
 %left PLUS SUB       /* lowest precedence */
 %left MULTIPLY divide  /* higher precedence */
 
-%type <num> E
+%type <expr> E
 %%
 
-S: E  { printf("\nPostfix expression: %s\n", postfix); };
+S: E  { printf("\nPostfix expression: %s\n", $1); };
 
 E: E PLUS E { 
-        append("+ "); 
-        $$ = $1 + $3; 
+        $$ = new_expr("%s%s+ ", $1, $3); 
+        free($1); 
+        free($3); 
     }
   | E SUB E { 
-        append("- "); 
-        $$ = $1 - $3; 
+        $$ = new_expr("%s%s- ", $1, $3); 
+        free($1); 
+        free($3); 
     }
   | E MULTIPLY E { 
-        append("* "); 
-        $$ = $1 * $3; 
+        $$ = new_expr("%s%s* ", $1, $3); 
+        free($1);
+        free($3);
     }
   | E divide E { 
-        append("/ "); 
-        $$ = $1 / $3; 
+        $$ = new_expr("%s%s/ ", $1, $3); 
+        free($1);
+        free($3);
     }
   | LP E RP { 
-        $$ = $2; 
+        $$ = $2; // Just pass through the expression string
     }
   | NUMBER { 
-        $$ = $1; 
-        append_num($1);
+        $$ = new_expr("%d ", $1);
     }
 ;
 

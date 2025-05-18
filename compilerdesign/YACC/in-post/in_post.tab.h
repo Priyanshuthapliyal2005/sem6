@@ -58,7 +58,7 @@ extern int yydebug;
     PLUS = 259,                    /* PLUS  */
     SUB = 260,                     /* SUB  */
     MULTIPLY = 261,                /* MULTIPLY  */
-    divide = 262,                  /* divide  */
+    DIVIDE = 262,                  /* DIVIDE  */
     LP = 263,                      /* LP  */
     RP = 264                       /* RP  */
   };
@@ -67,16 +67,7 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-union YYSTYPE
-{
-#line 23 "in_post.y"
-
-    int num;
-
-#line 77 "in_post.tab.h"
-
-};
-typedef union YYSTYPE YYSTYPE;
+typedef int YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif

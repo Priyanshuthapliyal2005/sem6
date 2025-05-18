@@ -58,7 +58,7 @@ extern int yydebug;
     PLUS = 259,                    /* PLUS  */
     SUB = 260,                     /* SUB  */
     MULTIPLY = 261,                /* MULTIPLY  */
-    divide = 262,                  /* divide  */
+    DIVIDE = 262,                  /* DIVIDE  */
     LP = 263,                      /* LP  */
     RP = 264                       /* RP  */
   };
@@ -73,7 +73,7 @@ extern int yydebug;
 #define PLUS 259
 #define SUB 260
 #define MULTIPLY 261
-#define divide 262
+#define DIVIDE 262
 #define LP 263
 #define RP 264
 

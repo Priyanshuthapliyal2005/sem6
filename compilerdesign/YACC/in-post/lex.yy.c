@@ -445,10 +445,9 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "in_post.l"
 #line 2 "in_post.l"
-    #include "y.tab.h"
-    #include <stdlib.h>
+    #include"y.tab.h"
+#line 450 "lex.yy.c"
 #line 451 "lex.yy.c"
-#line 452 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -665,10 +664,10 @@ YY_DECL
 		}
 
 	{
-#line 6 "in_post.l"
+#line 5 "in_post.l"
 
 
-#line 672 "lex.yy.c"
+#line 671 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -727,55 +726,55 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "in_post.l"
+#line 7 "in_post.l"
 {yylval=atoi(yytext); return NUMBER;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "in_post.l"
+#line 8 "in_post.l"
 {return PLUS;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 10 "in_post.l"
+#line 9 "in_post.l"
 {return LP;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 11 "in_post.l"
+#line 10 "in_post.l"
 {return RP;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 12 "in_post.l"
+#line 11 "in_post.l"
 {return SUB;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 13 "in_post.l"
+#line 12 "in_post.l"
 {return MULTIPLY;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 14 "in_post.l"
-{return divide;}
+#line 13 "in_post.l"
+{return DIVIDE;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 15 "in_post.l"
+#line 14 "in_post.l"
 {}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 16 "in_post.l"
+#line 15 "in_post.l"
 {printf("Invalid Expression");}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 18 "in_post.l"
+#line 17 "in_post.l"
 ECHO;
 	YY_BREAK
-#line 779 "lex.yy.c"
+#line 778 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1780,7 +1779,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 18 "in_post.l"
+#line 17 "in_post.l"
 
 
 int yywrap(){
