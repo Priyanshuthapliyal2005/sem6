@@ -1,10 +1,8 @@
-//design a dfa in lex code over sigma={a,b} for a language that accepts number of a and number of b divisible by 3
-
 %{
     #include<stdio.h>
 %}
 
-%s B C D E F G H I DEAD
+%s A B C D E F G H I DEAD
 %%
 
 <INITIAL>a BEGIN B;
@@ -16,8 +14,8 @@
 <B>b BEGIN E;
 <B>\n printf("Invalid string.\n"); BEGIN INITIAL;
 <B>[^ab\n] BEGIN DEAD;
--
-<C>a BEGIN INITIAL;
+
+<C>a BEGIN A;
 <C>b BEGIN F;
 <C>\n printf("Invalid string.\n"); BEGIN INITIAL;
 <C>[^ab\n] BEGIN DEAD;
@@ -52,7 +50,12 @@
 <I>\n printf("Invalid string.\n"); BEGIN INITIAL;
 <I>[^ab\n] BEGIN DEAD;
 
-<DEAD>\n printf("Invalid String.\n")' BEGIN INITIAL;
+<A>a BEGIN B;
+<A>b BEGIN D; 
+<A>\n printf("Valid string.\n"); BEGIN INITIAL;
+<A>[^ab\n] BEGIN DEAD;
+
+<DEAD>\n printf("Invalid String.\n"); BEGIN INITIAL;
 <DEAD>[^\n] BEGIN DEAD;
 
 %%
@@ -65,4 +68,8 @@ int main(){
 int yywrap(){
     return 1;
 }
+
+
+
+// design a dfa in lex code over sigma a,b for a language that accepts number of a and number of b divisible by 3
 

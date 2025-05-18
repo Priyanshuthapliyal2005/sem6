@@ -30,8 +30,8 @@ int yywrap(){
     return 1;
 }
 
-design a lex program to implement a dfa over sigma ={a,b} which accepts set of all possible string where |W|mod3=0
-moreover you also need to include a dead state which is responsible for printing an invalid message whenever you get any input string other than a,b . 
+//design a lex program to implement a dfa over sigma ={a,b} which accepts set of all possible string where |W|mod3=0
+//moreover you also need to include a dead state which is responsible for printing an invalid message whenever you get any input string other than a,b . 
 
 
 

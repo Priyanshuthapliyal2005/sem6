@@ -5,7 +5,19 @@
     void yyerror(const char *s);
 %}
 
-%token NUMBER PLUS SUB MULTIPLY divide LP RP
+%union {
+    int num;
+}
+
+%token <num> NUMBER
+%token PLUS SUB MULTIPLY divide LP RP
+
+/* Define precedence and associativity of operators */
+%left PLUS SUB       /* lowest precedence */
+%left MULTIPLY divide  /* higher precedence */
+/* Parentheses have the highest precedence */
+
+%type <num> E
 %%
 
 S: E  {printf("Result = %d\n",$1);};
@@ -37,5 +49,5 @@ int main(){
 }
 
 void yyerror(const char *s){
-    printf("SYNTAX ERROR\n",s);
+    printf("SYNTAX ERROR: %s\n", s);
 }

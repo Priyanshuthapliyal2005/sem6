@@ -5,15 +5,38 @@
     void yyerror(const char *s);
 %}
 
-%token NUMBER PLUS SUB MULTIPLY divide LP RP
+%union {
+    int num;
+}
+
+%token <num> NUMBER 
+%token PLUS SUB MULTIPLY divide LP RP
+
+%type <num> E
+
+%left PLUS SUB
+%left MULTIPLY divide
+%precedence NEG
+
 %%
 
-E: E PLUS E 
-| E SUB E 
-| E MULTIPLY E 
-| E divide E 
-| LP E RP 
-| NUMBER;
+S: E                { printf("Result: %d\n", $1); }
+  ;
+
+E: E PLUS E         { $$ = $1 + $3; }
+ | E SUB E          { $$ = $1 - $3; }
+ | E MULTIPLY E     { $$ = $1 * $3; }
+ | E divide E       { 
+                      if($3 == 0) {
+                          yyerror("Division by zero");
+                          YYABORT;
+                      } else {
+                          $$ = $1 / $3;
+                      }
+                    }
+ | SUB E %prec NEG  { $$ = -$2; }
+ | LP E RP          { $$ = $2; }
+ | NUMBER           { $$ = $1; };
 
 %%
 
@@ -28,5 +51,5 @@ int main(){
 }
 
 void yyerror(const char *s){
-    printf("SYNTAX ERROR\n",s);
+    printf("SYNTAX ERROR: %s\n", s);
 }

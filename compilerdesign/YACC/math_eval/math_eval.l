@@ -1,11 +1,12 @@
 %{
-    #include"y.tab.h"
-    #include<stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include "math_eval.tab.h"
 %}
 
 %%
 
-[0-9]+ {yylval=atoi(yytext); return NUMBER;}
+[0-9]+ {yylval.num=atoi(yytext); return NUMBER;}
 "+" {return PLUS;}
 "(" {return LP;}
 ")" {return RP;}
@@ -13,7 +14,7 @@
 "*" {return MULTIPLY;}
 "/" {return divide;}
 [ \t]+ {}
-. {printf("Invalid Expression");}
+. {printf("Invalid Character: %s\n", yytext); return 0;}
 
 %%
 
