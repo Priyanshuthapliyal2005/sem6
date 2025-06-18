@@ -12,23 +12,25 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
 
-        // Use prepared statements to prevent SQL injection
-        $query = "SELECT * FROM practice WHERE username = ? AND password = ?";
-        $stmt = mysqli_prepare($conn, $query);
-        mysqli_stmt_bind_param($stmt, "ss", $username, $password);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-
-        if(mysqli_num_rows($result) > 0){
-            // Start session and store username
-            $_SESSION['username'] = $username;
-            header("Location: dashboard.php");
-            exit(); // Always exit after redirect
-        }else{
-            echo "Invalid username or password";
+        $sql = "SELECT * FROM `practice` WHERE username = '$username' AND password = '$password'";
+        $result = $conn->query($sql);
+        if($result->num_rows > 0){
+            $_SESSION['username']= $username;
+            echo "
+            <script>
+                alert('login successfull!');
+            </script>";
+            header("dashbaord.php");
+            exit();
+        } else {
+            echo "
+            <script>
+                alert('login failed!');
+            </script>  
+            ";
         }
-        mysqli_stmt_close($stmt);
     }
+    $conn->close();
 ?>
 
 <!DOCTYPE html>
