@@ -1,0 +1,33 @@
+*{
+    margin : 0px;
+    padding : 0px;
+    box-sizing: border-box;
+
+}
+.container{
+    max-width: 80%;
+    background-color: rgb(198,152,241);
+    padding: 20px;
+    margin :auto;
+}
+
+.container h1,p{
+    text-align : center;
+}
+
+input,textarea{
+    width:90%;
+    margin:8px;
+    padding: 9px;
+    font-size: 25px;;
+}
+
+.submitMSG{
+    width: 90%;
+    margin: 8px;
+    padding: 9px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
