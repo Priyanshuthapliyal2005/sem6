@@ -1,12 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './cnt.css';
+import './counter.css';
 
-function Counter(){
+function Counter() {
     // State management
     const [cnt, setCnt] = useState(0);
     const [auto, setAuto] = useState(false);
-    const [speed, setSpeed] = useState(1000); // milliseconds
-    const [history, setHistory] = useState([]);
+    const [history, setHistory] = useState([0]);
     const intervalRef = useRef(null);
     
     // Track counter history
@@ -29,16 +28,18 @@ function Counter(){
     };
 
     // Reset counter and stop auto mode
-    function reset(){
+    function reset() {
         setCnt(0);
         setAuto(false);
-        if(intervalRef.current) {
+        if (intervalRef.current) {
             clearInterval(intervalRef.current);
         }
         intervalRef.current = null;
-    }    // Toggle auto counter mode
+    }
+
+    // Toggle auto counter mode
     function autonomous() {
-        if(intervalRef.current) {
+        if (intervalRef.current) {
             // Stop auto mode
             clearInterval(intervalRef.current);
             intervalRef.current = null;
@@ -48,20 +49,23 @@ function Counter(){
         // Start auto mode
         intervalRef.current = setInterval(() => {
             setCnt(prev => prev + 1);
-        }, speed);
+        }, 1000);
         setAuto(true);
     }
     
-    return(
+    return (
         <div className='counter'>
             <div className='display'>
                 <h1>{cnt}</h1>
                 {auto && <div className="auto-indicator">Auto On</div>}
             </div>
-              {/* Show recent history */}
+            
+            {/* Show recent history */}
             <div className="history">
                 <small>Recent values: {history.join(', ')}</small>
-            </div>            <div className='buttons'>
+            </div>
+
+            <div className='buttons'>
                 <button 
                     onClick={() => increment()} 
                     disabled={auto}
@@ -74,7 +78,8 @@ function Counter(){
                 >
                     Decrement
                 </button>
-                <button onClick={reset}>Reset</button>                <button 
+                <button onClick={reset}>Reset</button>
+                <button 
                     onClick={autonomous}
                     className={auto ? 'auto-active' : ''}
                 >

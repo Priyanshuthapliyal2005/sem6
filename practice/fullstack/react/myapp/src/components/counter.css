@@ -1,0 +1,159 @@
+:root {
+  --primary-button: #4285f4;
+  --secondary-button: #ea4335;
+  --reset-button: #fbbc05;
+  --auto-button: #4285f4;
+  --extra-button: #673ab7;
+  --text-color: #333;
+  --bg-light: #f8f9fa;
+}
+
+.counter {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: large;
+  padding: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.display h1 {
+  font-size: 4rem;
+  color: #333;
+  background-color: var(--bg-light);
+  border-radius: 10px;
+  min-width: 150px;
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.history {
+  text-align: center;
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 0.5rem;
+}
+
+.buttons button {
+  flex: 1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.buttons button:nth-child(1) {
+  background-color: var(--primary-button);
+}
+
+.buttons button:nth-child(2) {
+  background-color: var(--secondary-button);
+}
+
+.buttons button:nth-child(3) {
+  background-color: var(--reset-button);
+  color: #333;
+}
+
+.buttons button:nth-child(4) {
+  background-color: var(--auto-button);
+}
+
+.buttons button:hover {
+  filter: brightness(90%);
+}
+
+.buttons button:active {
+  transform: scale(0.97);
+}
+
+.extra-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #ddd;
+}
+
+.extra-controls button {
+  background-color: var(--extra-button);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 50px;
+}
+
+.extra-controls button:hover {
+  filter: brightness(90%);
+}
+
+.extra-controls button:active {
+  transform: scale(0.97);
+}
+
+.auto-active {
+  background-color: #34a853 !important;
+}
+
+.auto-indicator {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #34a853;
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 6px;
+  border-radius: 20px;
+}
+
+/* Disabled button styles */
+.buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column;
+  }
+  
+  .buttons button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .extra-controls {
+    flex-wrap: wrap;
+  }
+}
