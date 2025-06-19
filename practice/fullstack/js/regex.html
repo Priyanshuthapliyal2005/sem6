@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+
+    <label>Name: </label><br>
+    <input type="text" name="name" id="name" placeholder="Enter your name"><br><br>
+
+    <label>Email: </label><br>
+    <input type="email" name="email" id="email" placeholder="Enter your email"><br><br>
+
+    <label>Password: </label><br>
+    <input type="password" name="password" id="password" placeholder="Enter your password"><br><br>
+
+    <button onClick="signup()">Sign Up</button>
+
+    <p id="result"></p>
+
+    <script>
+        const users = []; // Fixed typo here
+
+        function signup() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const nameRegex = /^[a-zA-Z]{2,}$/;
+            const emailRegex = /^[^@]+@[^@]+\.[^@]+$/;
+            const passwordRegex = /^.{4,}$/;
+
+            if (!nameRegex.test(name)) {
+                document.getElementById("result").innerText = "Invalid name. It should be at least 2 characters long and contain only letters.";
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                document.getElementById("result").innerText = "Invalid email format.";
+                return;
+            }
+            if (!passwordRegex.test(password)) {
+                document.getElementById("result").innerText = "Invalid password. It should be at least 4 characters long.";
+                return;
+            }
+
+            users.push({ name, email });
+
+            document.getElementById("result").innerText = "Sign up successful! Welcome, " + name + "!";
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+        }
+    </script>
+</body>
+</html>

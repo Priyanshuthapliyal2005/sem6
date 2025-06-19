@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+</head>
+<body>
+    <h1>CountDown</h1>
+    <label for="sec">Enter the Seconds: </label>
+    <input type="number" name="sec" id="sec">
+    <button onclick="startCountDown()">Start</button>
+
+    <p id="result"></p>
+
+    <script>
+        function startCountDown(){
+            var sec = document.getElementById("sec").value;
+
+            var result = document.getElementById("result");
+
+            if(sec <= 0){
+                result.innerHTML = "Please enter a positive number.";
+                return;
+            }
+
+            setInterval(()=>{
+                sec--;
+                result.innerHTML = sec;
+                if(sec <= 0){
+                    result.innerHTML = "Time's up!";
+                    clearInterval(this);
+                }
+            },1000)
+        }
+    </script>
+</body>
+</html>

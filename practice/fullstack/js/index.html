@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Quiz</title>
+</head>
+<body>
+
+    <h1>Mini Quiz</h1>
+    <p>What is the capital of India?</p>
+    
+    <select name="capital" id="capital">
+        <option value="Delhi">Delhi</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Chennai">Chennai</option>
+    </select>
+    
+    <br><br>
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="result">Result</p>
+
+    <script>
+        function checkAnswer() {
+            const check = document.getElementById("capital").value;
+            const result = document.getElementById("result");
+
+            if (check === "Delhi") {
+                result.innerHTML = "Correct Answer";
+                result.style.color = "green";
+            } else {
+                result.innerHTML = "Wrong Answer";
+                result.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
