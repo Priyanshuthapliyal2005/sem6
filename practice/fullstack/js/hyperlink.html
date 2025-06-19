@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink</title>
+    <style>
+        body:hover{
+            background-color: yellow;
+        }
+        /* Fix: 'hower' → 'hover' */
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://www.google.com" target="_blank">google.com</a>
+    <br>
+    <a href="https://www.facebook.com" target="_self">facebook.com</a>
+    <br>
+
+    <!-- Fix: <img> tag should not contain <a>, and 'target' is not valid for <img> -->
+    <!-- Correct way: wrap the image with <a> if you want to make image clickable -->
+    <a href="https://www.youtube.com" target="_blank">
+        <img src="a.png" alt="image" width="200">
+    </a>
+
+</body>
+</html>
