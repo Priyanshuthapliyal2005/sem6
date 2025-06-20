@@ -1,0 +1,5 @@
+int funct(){ is a whole function
+float hi(){ is a whole function
+int main() { is a whole function
+funct(a,b); is a function name on call .
+HI(); is a function name on call .
