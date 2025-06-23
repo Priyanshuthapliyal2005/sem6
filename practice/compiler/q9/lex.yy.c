@@ -368,7 +368,8 @@ char *yytext;
 #define INITIAL 0
 #line 2 "comment.l"
     #include<stdio.h>
-#line 372 "lex.yy.c"
+    FILE *yyin,*yyout;
+#line 373 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -519,9 +520,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 5 "comment.l"
+#line 6 "comment.l"
 
-#line 525 "lex.yy.c"
+#line 526 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -606,25 +607,25 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "comment.l"
+#line 7 "comment.l"
 {fprintf(yyout,"");}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "comment.l"
+#line 8 "comment.l"
 {fprintf(yyout,"");}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 8 "comment.l"
+#line 9 "comment.l"
 {fprintf(yyout,"%s",yytext);}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 9 "comment.l"
+#line 10 "comment.l"
 ECHO;
 	YY_BREAK
-#line 628 "lex.yy.c"
+#line 629 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1510,7 +1511,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 9 "comment.l"
+#line 10 "comment.l"
 
 
 int main(){

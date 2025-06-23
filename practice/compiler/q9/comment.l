@@ -1,5 +1,6 @@
 %{
     #include<stdio.h>
+    FILE *yyin,*yyout;
 %}
 
 %%
